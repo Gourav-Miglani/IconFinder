@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/categoryFragment">
+
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.project2.Fragments.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_searchIcon_Fragment"
+            app:destination="@id/searchIcon_Fragment" />
+        <action
+            android:id="@+id/action_categoryFragment_to_iconsetFragment"
+            app:destination="@id/iconsetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchIcon_Fragment"
+        android:name="com.example.project2.Fragments.SearchIcon_Fragment"
+        android:label="SearchIcon_Fragment" >
+        <action
+            android:id="@+id/action_searchIcon_Fragment_to_downloadFragment"
+            app:destination="@id/downloadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iconsetFragment"
+        android:name="com.example.project2.Fragments.IconsetFragment"
+        android:label="IconsetFragment" >
+        <action
+            android:id="@+id/action_iconsetFragment_to_iconsFragment"
+            app:destination="@id/iconsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/iconsFragment"
+        android:name="com.example.project2.Fragments.IconsFragment"
+        android:label="IconsFragment" >
+        <action
+            android:id="@+id/action_iconsFragment_to_downloadFragment"
+            app:destination="@id/downloadFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/downloadFragment"
+        android:name="com.example.project2.Fragments.DownloadFragment"
+        android:label="DownloadFragment" >
+        <argument
+            android:name="icon"
+            app:argType="com.example.project2.Icon" />
+    </fragment>
+</navigation>
